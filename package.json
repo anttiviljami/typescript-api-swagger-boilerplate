@@ -3,9 +3,31 @@
   "author": "Viljami Kuosmanen <viljami@avoinsorsa.fi>",
   "version": "1.0.0",
   "description": "Boilerplate project for building RESTful APIs with Swagger docs",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "license": "MIT",
+  "engines": {
+    "node": "^6.11.2",
+    "npm": "^5.3.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/src/index.js",
+    "dev": "concurrently 'npm run watch-build' 'npm run watch-server'",
+    "build": "tsc",
+    "watch-build": "tsc -w",
+    "watch-server": "nodemon -L --watch dist/src dist/src/index.js",
+    "lint": "tslint --format prose --project .",
+    "test": "mocha test dist/test"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.8",
+    "@types/node": "^8.0.20",
+    "concurrently": "^3.5.0",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "tslint": "^5.6.0",
+    "typescript": "^2.4.2"
   }
 }
