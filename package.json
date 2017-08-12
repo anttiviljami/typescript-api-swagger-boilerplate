@@ -1,0 +1,11 @@
+{
+  "name": "typescript-api-swagger-boilerplate",
+  "author": "Viljami Kuosmanen <viljami@avoinsorsa.fi>",
+  "version": "1.0.0",
+  "description": "Boilerplate project for building RESTful APIs with Swagger docs",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
