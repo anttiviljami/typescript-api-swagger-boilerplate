@@ -3,3 +3,6 @@ node_js:
   - node
 before_script:
   - npm run build
+script:
+  - npm run lint
+  - npm test
